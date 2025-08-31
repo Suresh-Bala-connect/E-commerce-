@@ -1,0 +1,155 @@
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 60px 5%;
+  background-color: #f9f9f9;
+  font-family: 'Arial', sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.con_container, .service, .policy, .contact > div:last-child {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 20px;
+}
+
+.con_logo h2 {
+  color: #4CAF50;
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.con_container p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.con_icon {
+  display: flex;
+  gap: 15px;
+}
+
+.con_icon svg {
+  font-size: 22px;
+  color: #555;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.con_icon svg:hover {
+  color: #4CAF50;
+  transform: translateY(-3px);
+}
+
+.service h2, .policy h2, .contact > div:last-child h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.service h2:after, .policy h2:after, .contact > div:last-child h2:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 2px;
+  background-color: #4CAF50;
+}
+
+.service p, .policy p {
+  color: #666;
+  margin-bottom: 12px;
+  font-size: 15px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.service p:hover, .policy p:hover {
+  color: #4CAF50;
+  transform: translateX(5px);
+}
+
+.contact > div:last-child p {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+.contact > div:last-child svg {
+  font-size: 18px;
+  color: #4CAF50;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .contact {
+    gap: 20px;
+    padding: 40px 5%;
+  }
+  
+  .con_container, .service, .policy, .contact > div:last-child {
+    flex-basis: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 20px;
+  }
+  
+  .con_container, .service, .policy, .contact > div:last-child {
+    flex-basis: 100%;
+    width: 100%;
+  }
+  
+  .con_icon {
+    justify-content: center;
+  }
+  
+  .service, .policy {
+    text-align: center;
+  }
+  
+  .service h2:after, .policy h2:after, .contact > div:last-child h2:after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .service p:hover, .policy p:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 30px 15px;
+  }
+  
+  .con_logo h2 {
+    font-size: 20px;
+  }
+  
+  .service h2, .policy h2, .contact > div:last-child h2 {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,78 @@
+/* Container for all testimonials */
+.customer-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 50px 20px;
+  background: #f9f9f9;
+}
+
+/* Each testimonial card */
+.customer {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 25px 20px;
+  width: 320px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  line-height: 2.5;
+}
+
+.customer:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Stars */
+.customer svg {
+  color: #FFD700; /* gold */
+  font-size: 1.5rem;
+  margin: 0 2px;
+}
+
+/* Heading */
+.customer h3 {
+  margin: 15px 0 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Review text */
+.customer p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* Smiley icon */
+.customer .pi-smiley {
+  font-size: 2rem;
+  color: #4CAF50;
+  margin-bottom: 8px;
+}
+
+/* Reviewer name */
+.customer h2 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #222;
+}
+.head{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .customer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .customer {
+    width: 90%;
+  }
+}
